@@ -1,32 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Clock Widget</title>
+  <title>CLOCK</title>
+  <script src="https://cdn.logwork.com/widget/clock.js"></script>
   <style>
-    body {
-      display: block;
-      height: 100vh;
-      margin: 0;
-      background-color: #f4f4f4;
-      font-family: Arial, sans-serif;
+    .clock-container {
+      width: 400px;        /* Crop width */
+      height: 400px;       /* Crop height */
+      overflow: hidden;    /* Hide everything outside this box */
+      position: relative;
     }
-.clock-time {
+
+    .clock-time {
       display: block;
-      transform: scale(1.5); /* Scale down the widget */
-      transform-origin: top left;
+      position: absolute;
+      top: 0px;          /* Shift widget upward */
+      left: 0px;         /* Shift widget leftward */
     }
   </style>
+</head>
 <body>
-  <script src="https://cdn.logwork.com/widget/clock.js"></script>
-  <a href="https://logwork.com/current-time-in-kolkata-india-west-bengal" 
-     class="clock-time" 
-     data-style="default-numeral" 
-     data-size="400" 
-     data-timezone="Asia/Kolkata">
-    CLOCK
-  </a>
+  <div class="clock-container">
+    <a href="https://logwork.com/current-time-in-kolkata-india-west-bengal" 
+       class="clock-time" 
+       data-style="default-numeral" 
+       data-size="400" 
+       data-timezone="Asia/Kolkata">
+      CLOCK
+    </a>
+  </div>
 </body>
 </html>
-
